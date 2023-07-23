@@ -111,7 +111,7 @@ section {
     margin: 2rem 0 4rem;
 }
 
-.home__btn-box {
+/* .home__btn-box {
     position: relative;
     display: flex;
     justify-content: space-between;
@@ -169,12 +169,12 @@ section {
 
 .home__btn:hover::before {
     width: 100%;
-}
+} */
 
 .home__social {
     position: absolute;
     bottom: 4rem;
-    width: 170px;
+    width: 100px;
     display: flex;
     justify-content: space-between;
 
