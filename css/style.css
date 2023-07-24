@@ -174,7 +174,7 @@ section {
 .home__social {
     position: absolute;
     bottom: 4rem;
-    width: 100px;
+    width: 160px;
     display: flex;
     justify-content: space-between;
 
@@ -544,4 +544,6 @@ section {
 }
 
 /* ======== Section contact ======================== */
+
+
 
