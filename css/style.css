@@ -83,13 +83,13 @@ section {
 .home {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     padding: 0 9%;
 }
 
 .home__content {
     max-width: 60rem;
-    padding-right: 3rem;
+    margin-right: 2rem;
 }
 
 .home__title {
@@ -104,15 +104,33 @@ section {
 
 .home__text {
     position: relative;
-    width: 32.8rem;
+    width: 26rem;
 }
 
 .home__text-animate {
     font-size: 3.2rem;
     font-weight: 700;
     color: transparent;
-    -webkit-text-stroke: 1px var(--main-color);
-    letter-spacing: .3rem;
+    -webkit-text-stroke: .7px var(--main-color);
+    background-image: linear-gradient(var(--main-color), var(--main-color));
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -26rem 0;
+    animation: homeBgText 6s linear infinite;
+    animation-delay: 2s;
+}
+
+.home__text-animate::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-right: 2px solid var(--main-color);
+    z-index: -1;
+    animation: homeCursorText 6s linear infinite;
+    animation-delay: 2s;
 }
 
 .home__text-content {
@@ -155,14 +173,6 @@ section {
     background: transparent;
     color: var(--main-color);
 }
-
-/* .home__btn:nth-child(2):hover {
-    color: var(--bg-color);
-}
-
-.home__btn:nth-child(2)::before {
-    background: var(--main-color);
-} */
 
 .btn::before {
     content: '';
@@ -280,6 +290,7 @@ section {
     border-left: .2rem solid var(--main-color);
     border-bottom: .2rem solid var(--second-bg-color);
     border-right: .2rem solid var(--main-color);
+    animation: aboutSpinner 8s linear infinite;
 }
 
 .about__content{
@@ -752,6 +763,14 @@ section {
     .home__image-img img{
         width: 70vw;
     }
+
+    .home__text {
+        width: 21rem;
+    }
+    
+    .home__text-animate {
+        background-position: -21rem 0;
+    }
 }
 
 @media (max-width: 520px){
@@ -797,5 +816,58 @@ section {
         align-items: center;
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* Animation */
+@keyframes homeBgText {
+    0%,
+    10%,
+    100% {
+        background-position: -26rem 0;
+    }
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+@media (max-width: 768px){
+    @keyframes homeBgText {
+        0%,
+        10%,
+        100% {
+            background-position: -21rem 0;
+        }
+        65%,
+        85% {
+            background-position: 0 0;
+        }
+    }
+}
+
+@keyframes homeCursorText {
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    75%,
+    81%{
+        opacity: 0;
+    }
+}
+
+@keyframes aboutSpinner {
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
