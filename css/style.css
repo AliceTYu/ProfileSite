@@ -527,12 +527,15 @@ section {
     width: 40%;
 }
 .skills__column:nth-child(2) .skills__content .progress:nth-child(4) .progress__bar span {
-    width: 60%;
+    width: 40%;
 }
 .skills__column:nth-child(2) .skills__content .progress:nth-child(5) .progress__bar span {
-    width: 70%;
+    width: 60%;
 }
 .skills__column:nth-child(2) .skills__content .progress:nth-child(6) .progress__bar span {
+    width: 70%;
+}
+.skills__column:nth-child(2) .skills__content .progress:nth-child(7) .progress__bar span {
     width: 70%;
 }
 
