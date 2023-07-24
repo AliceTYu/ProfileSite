@@ -429,6 +429,10 @@ section {
     font-size: 2rem;
 }
 
+.text__link{
+    color: var(--text-color);
+}
+
 /* ======== Section skills ======================== */
 .skills{
     min-height: auto;
@@ -539,7 +543,5 @@ section {
     width: 70%;
 }
 
+/* ======== Section contact ======================== */
 
-
-
-/* ======== Section ______ ======================== */
