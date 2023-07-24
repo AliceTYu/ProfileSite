@@ -138,58 +138,6 @@ section {
     margin: 2rem 0 4rem;
 }
 
-.btn-box {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    width: 34.5rem;
-    height: 5rem;
-}
-
-.btn {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 15rem;
-    height: 100%;
-    background: var(--main-color);
-    border: .2rem solid var(--main-color);
-    border-radius: .8rem;
-    font-size: 1.8rem;
-    font-weight: 700;
-    letter-spacing: .1rem;
-    color: var(--bg-color);
-    z-index: 1;
-    overflow: hidden;
-    transition: .5s;
-}
-
-.btn:hover {
-    color: var(--main-color);
-}
-
-.btn:nth-child(2) {
-    background: transparent;
-    color: var(--main-color);
-}
-
-.btn::before {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: var(--bg-color);
-    z-index: -1;
-    transition: .5s;
-}
-
-.btn:hover::before {
-    width: 100%;
-}
-
 .home__social {
     position: absolute;
     bottom: 4rem;
@@ -303,6 +251,9 @@ section {
 
 .about__content-text {
     font-size: 1.6rem;
+}
+
+.about__content-text:not(:last-child){
     margin: 2rem 0 3rem;
 }
 
