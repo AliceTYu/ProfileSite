@@ -552,6 +552,104 @@ section {
     width: 70%;
 }
 
+/* ======== portfolio section ======================== */
+.portfolio{
+}
+
+.portfolio__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-right: -2rem;
+    margin-left: -2rem;
+}
+
+.portfolio__box{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    width: calc(100% / 3);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2.5rem;
+}
+
+@media (max-width: 900px){
+    .portfolio__box{
+        width: calc(100% / 2);
+    }
+}
+
+@media (max-width: 600px){
+    .portfolio__box{
+        width: 100%
+    }
+}
+
+.portfolio__image{
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio__box .portfolio__image {
+    width: 100%;
+    transition: .5s ease;
+}
+
+.portfolio__box:hover .portfolio__image {
+    transform: scale(1.1);
+}
+
+.portfolio__layer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0, .1), var(--main-color));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: .5s ease;
+}
+
+.portfolio__box:hover .portfolio__layer {
+    transform: translateY(0);
+}
+
+
+.portfolio__layer .title{
+    font-size: 3rem;
+}
+
+.portfolio__layer .text{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+}
+
+.portfolio__link{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.portfolio__link i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+
 /* ======== footer ======================== */
 .footer {
     display: flex;
@@ -559,6 +657,7 @@ section {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
+    background: var(--second-bg-color);
 }
 
 .footer__text{
@@ -596,7 +695,7 @@ section {
 
 .footer__icon-link i {
     font-size: 2.4rem;
-    color: var(--bg-color);
+    color: var(--second-bg-color);
     transition: .5s;
 }
 
