@@ -34,3 +34,11 @@ window.onscroll = () => {
     menuIcon.classList.remove('bx-x')
     navbar.classList.remove('active')
 }
+
+// dark/light mode
+let darkIcon = document.querySelector('#darkMode-icon')
+
+darkIcon.onclick = () => {
+    darkIcon.classList.toggle('bxs-sun')
+    document.body.classList.toggle('light__mode')
+}

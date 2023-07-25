@@ -19,6 +19,13 @@
     --second-main-color: #3c1329;
 }
 
+.light__mode{
+    --bg-color: #efefef;
+    --second-bg-color: #d8d8d8;
+    --text-color: #1e1e1e;
+    --second-main-color: #ff9ad0;
+}
+
 html {
     font-size: 62.5%;
     overflow-x: hidden;
@@ -27,6 +34,13 @@ html {
 body {
     background: var(--bg-color);
     color: var(--text-color);
+}
+
+#darkMode-icon{
+    color: var(--main-color);
+    font-size: 2.5rem;
+    padding-left: 2rem;
+    cursor: pointer;
 }
 
 /* ======== Header ======================== */
@@ -52,6 +66,11 @@ body {
     font-size: 2.5rem;
     color: var(--text-color);
     font-weight: 600;
+}
+
+.header__menu{
+    display: flex;
+    align-items: center;
 }
 
 .navbar__link {
